@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Sudiksha ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --red:#ff4d6d;
+  --pink:#ffd6e8;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(180deg,#ffe6f0,#fff);
+  overflow-x:hidden;
+  text-align:center;
+}
+
+/* Hearts */
+.heart{
+  position:fixed;
+  bottom:-20px;
+  font-size:20px;
+  animation:float 6s linear infinite;
+}
+@keyframes float{
+  to{transform:translateY(-110vh);opacity:0;}
+}
+
+/* Rose petals */
+.petal{
+  position:fixed;
+  top:-20px;
+  font-size:22px;
+  animation:fall 7s linear infinite;
+}
+@keyframes fall{
+  to{transform:translateY(110vh) rotate(360deg);opacity:0;}
+}
+
+section{padding:80px 20px;}
+
+/* Hero */
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.hero h1{
+  font-family:'Great Vibes',cursive;
+  font-size:3.3rem;
+  color:var(--red);
+  text-shadow:0 0 20px rgba(255,77,109,.6);
+}
+.hero button{
+  margin-top:30px;
+  padding:15px 45px;
+  font-size:20px;
+  border:none;
+  border-radius:50px;
+  background:linear-gradient(135deg,#ff4d6d,#ff85a2);
+  color:#fff;
+  cursor:pointer;
+  animation:bounce 1.5s infinite;
+}
+@keyframes bounce{
+  50%{transform:translateY(-8px);}
+}
+
+/* Timeline */
+.timeline{max-width:700px;margin:auto;}
+.timeline div{
+  background:#fff;
+  padding:20px;
+  margin:15px 0;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+/* Reasons */
+.reasons{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+.card{
+  background:var(--pink);
+  padding:25px;
+  border-radius:20px;
+  animation:pulse 3s infinite alternate;
+}
+@keyframes pulse{to{transform:scale(1.05);}}
+
+/* Gallery */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:20px;
+}
+.gallery img{
+  width:100%;
+  border-radius:10px;
+  box-shadow:0 12px 22px rgba(0,0,0,.15);
+  transition:.3s;
+}
+.gallery img:hover{transform:rotate(-3deg) scale(1.05);}
+
+/* Letter */
+.letter{
+  max-width:700px;
+  margin:auto;
+  background:#fff;
+  padding:40px;
+  border-radius:20px;
+  font-family:'Great Vibes',cursive;
+  font-size:1.6rem;
+}
+
+/* Final */
+.final{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.final h2{
+  font-family:'Great Vibes',cursive;
+  font-size:3rem;
+  color:var(--red);
+}
+.final button{
+  padding:16px 40px;
+  margin:15px;
+  font-size:20px;
+  border-radius:50px;
+  border:none;
+  cursor:pointer;
+}
+#yesBtn{
+  background:linear-gradient(135deg,#ff4d6d,#ff85a2);
+  color:white;
+}
+#noBtn{
+  background:#ccc;
+}
+</style>
+</head>
+
+<body>
+
+<audio autoplay loop>
+  <source src="romantic-music.mp3" type="audio/mpeg">
+</audio>
+
+<section class="hero">
+  <h1>Sudiksha,<br>Will You Be Mine Forever? ❤️</h1>
+  <button onclick="document.getElementById('final').scrollIntoView()">Yes 💖</button>
+</section>
+
+<section>
+  <h2>Our Love Story</h2>
+  <div class="timeline">
+    <div>✨ The day we met</div>
+    <div>🌸 Our favorite moments together</div>
+    <div>💫 Every memory that made me love you more</div>
+  </div>
+</section>
+
+<section>
+  <h2>Reasons I Love You ❤️</h2>
+  <div class="reasons">
+    <div class="card">Your smile 😊</div>
+    <div class="card">Your care 🫶</div>
+    <div class="card">Your kindness 💕</div>
+    <div class="card">You are my happiness ✨</div>
+  </div>
+</section>
+
+<section>
+  <h2>Our Memories</h2>
+  <div class="gallery">
+    <img src="photo1.jpg">
+    <img src="photo2.jpg">
+    <img src="photo3.jpg">
+  </div>
+</section>
+
+<section>
+  <h2>My Love Letter 💌</h2>
+  <div class="letter">
+    My dearest Sudiksha,<br><br>
+    You are my favorite dream come true.
+    Every moment with you feels magical.
+    I promise to love you today, tomorrow, and always.
+  </div>
+</section>
+
+<section id="final" class="final">
+  <h2>Will You Say Yes? 💍</h2>
+  <button id="yesBtn">Say Yes 💕</button>
+  <button id="noBtn">No 🙈</button>
+</section>
+
+<script>
+/* Hearts */
+setInterval(()=>{
+  let h=document.createElement("div");
+  h.className="heart";
+  h.innerText="❤️";
+  h.style.left=Math.random()*100+"vw";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),6000);
+},300);
+
+/* Rose petals */
+setInterval(()=>{
+  let p=document.createElement("div");
+  p.className="petal";
+  p.innerText="🌹";
+  p.style.left=Math.random()*100+"vw";
+  document.body.appendChild(p);
+  setTimeout(()=>p.remove(),8000);
+},400);
+
+/* Playful buttons */
+const noBtn=document.getElementById("noBtn");
+noBtn.addEventListener("mouseover",()=>{
+  noBtn.style.transform=`translate(${Math.random()*200-100}px,${Math.random()*100-50}px)`;
+});
+
+document.getElementById("yesBtn").addEventListener("click",()=>{
+  alert("Sudiksha said YES 💖💍");
+  downloadCertificate();
+});
+
+/* Certificate */
+function downloadCertificate(){
+  const canvas=document.createElement("canvas");
+  canvas.width=800; canvas.height=600;
+  const c=canvas.getContext("2d");
+
+  c.fillStyle="#ffe6f0";
+  c.fillRect(0,0,800,600);
+
+  c.fillStyle="#ff4d6d";
+  c.font="48px serif";
+  c.fillText("💖 She Said YES! 💖",200,150);
+
+  c.font="32px serif";
+  c.fillText("This certifies that",250,250);
+  c.fillText("Sudiksha accepted the proposal 💍",120,320);
+  c.fillText("Forever begins now ✨",200,400);
+
+  const link=document.createElement("a");
+  link.download="She_Said_Yes_Sudiksha.png";
+  link.href=canvas.toDataURL();
+  link.click();
+}
+</script>
+
+</body>
+</html>
