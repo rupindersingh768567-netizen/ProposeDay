@@ -155,7 +155,7 @@ section{padding:80px 20px;}
 
 <body>
 
-<audio autoplay loop>
+<audio id="bgMusic" loop>
   <source src="romantic-music.mp3" type="audio/mpeg">
 </audio>
 
@@ -235,7 +235,15 @@ noBtn.addEventListener("mouseover",()=>{
   noBtn.style.transform=`translate(${Math.random()*200-100}px,${Math.random()*100-50}px)`;
 });
 
-document.getElementById("yesBtn").addEventListener("click",()=>{
+document.getElementById("yesBtn").addEventListener("click", () => {
+  const music = document.getElementById("bgMusic");
+
+  music.play().then(() => {
+    // music started successfully
+  }).catch(() => {
+    alert("Tap once more to start the music 🎶");
+  });
+
   alert("Sudiksha said YES 💖💍");
   downloadCertificate();
 });
@@ -266,4 +274,5 @@ function downloadCertificate(){
 </script>
 
 </body>
+
 </html>
